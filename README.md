@@ -32,11 +32,12 @@ The project is implemented using Python and Jupyter Notebook. Various libraries 
 
 ### A. Dataset Reading, Potential Warehouse, and Customer Locations
 First, the data set obtained from preprocessing is read. Then, a random 20% of the data set (154 samples) is selected as potential warehouse locations, and 90% of the data set (692 samples) is considered as customer locations. Separate data frames are created for these locations, and a geometry column is added using latitude and longitude information and the geopandas library. The map below shows the potential warehouse and customer locations.
-![potential warehouse and customer locations](https://github.com/hasanerdemak/AI-Logistics-Centers-Turkey-LP/assets/70165677/5f70882a-51f6-48ef-a28d-e19e029c9df1)
+![customer_and_potential_warehouse_locations](https://github.com/hasanerdemak/AI-Logistics-Centers-Turkey-LP/assets/70165677/db135ec3-72fc-481d-9641-f578e1023290)
+
 
 ### B. Yearly Demand per Region
 In addition, the total demand for each of the 26 regions, considered according to İBBS-II system, is visualized on the map below.
-![Yearly Demand per Region](https://github.com/hasanerdemak/AI-Logistics-Centers-Turkey-LP/assets/70165677/27ba3270-28e8-463a-a15a-90a64a3663ed)
+![annual_demand_by_region](https://github.com/hasanerdemak/AI-Logistics-Centers-Turkey-LP/assets/70165677/153a52af-484d-4f29-ad90-de64a4afc6de)
 
 ### C. Supply and Fixed Costs
 While determining the optimal number and locations of warehouses, factors such as the capacity of each warehouse (supply), yearly rent and personnel costs for each warehouse are considered. For warehouses located in cities, the yearly rent cost is set to 1,500,000 TL and personnel cost to 2,100,000 TL. For warehouses located in districts, the yearly rent cost is set to 500,000 TL and personnel cost to 700,000 TL. The total number of products each warehouse can supply is set to be three times the average demand of customers in its region.
@@ -55,7 +56,7 @@ In the optimal solution of the problem, the total cost is calculated as 193,782,
 Warehouse locations are strategically placed in districts rather than cities, reducing overall costs. Out of 27 warehouses, 11 are located in cities, and the remaining 16 are in districts.
 
 The map below displays the locations of the established warehouses and their corresponding customers.
-![established warehouses and their corresponding customers](https://github.com/hasanerdemak/AI-Logistics-Centers-Turkey-LP/assets/70165677/da8e9f76-6aa0-49c8-8f82-6195ac9a0bee)
+![optimized_customer_supply](https://github.com/hasanerdemak/AI-Logistics-Centers-Turkey-LP/assets/70165677/146dee4c-70df-4511-903f-60db51e3dcff)
 
 ## Conclusion
 In conclusion, this project presents an artificial intelligence agent designed to determine the optimal number and locations of logistics centers for transportation companies across Turkey. The capacitated facility location problem is treated as a mathematical optimization problem and solved using linear programming. This method provides a roadmap for creating more efficient and profitable logistics layout models for transportation companies, taking factors such as rent, personnel, and transportation costs into account. The results have significantly reduced logistics costs for transportation companies, leading to increased customer satisfaction. The map and database of the most suitable warehouse locations offer valuable insights for transportation companies. Future work may focus on further refining the method and exploring its applicability to other sectors.
